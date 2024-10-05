@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+        <p>Please enter your username</p>
+        <form id="usernameForm">
+            <input type="text" id="username" placeholder="Enter your username" required />
+            <input type="submit" value="Submit" />
+        </form>
+        <p id="greetingMessage"></p>
+    </div>
+
+    <script>
+        const form = document.getElementById('usernameForm');
+        const greetingMessage = document.getElementById('greetingMessage');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            if (username) {
+                window.location.href = 'levels.html';
+            } else {
+                greetingMessage.textContent = 'Please enter a username.';
+            }
+        });
+    </script>
+</body>
+</html>
