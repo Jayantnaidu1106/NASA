@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background: linear-gradient(0deg, #0430cf 0%, #7847c1 100%);
+    margin: 0;
+  
+    overflow: hidden;
+ 
+}
+
+.container {
+    text-align: center;
+    animation: fadeIn 1.2s ease-out;
+    color: aliceblue; /* Fade-in for the container */
+}
+
+.levels {
+    display: grid;
+    grid-template-columns: repeat(3, 1px);
+    grid-gap: 0px;
+    margin:40px 0;
+}
+
+.level {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #308693;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 0.6s ease-out forwards; /* Bounce effect */
+}
+.level {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #308693;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 0.6s ease-out forwards;
+    margin-bottom: 30px; /* Add margin to space the levels */
+}
+
+.level:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.level:nth-child(even) {
+    animation-delay: 0.4s;
+}
+
+.level:hover {
+    background-color: #5bb8b2;
+    transform: scale(1.1); /* Scale up on hover */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+}
+h1 {
+    font-size: 36px; /* Font size of the heading */
+    color: #ffffff; /* White color for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    font-weight: bold; /* Make it bold */
+    text-align: center; /* Center the heading */
+    animation: fadeIn 1s ease; /* Optional: Fade-in animation for the heading */
+}
+
+.level:active {
+    transform: scale(0.95); /* Press-down effect */
+    transition: transform 0.1s ease;
+}
+
+.level-details {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 18px;
+    color: #333;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

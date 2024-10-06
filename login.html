@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game with Login/Register</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <!-- Welcome Section -->
+    <div class="container">
+        <h1>Welcome to Globe protocol games!</h1>
+        <button id="play" class="play-btn hidden">Play</button>
+    </div>
+
+    <!-- Auth Section -->
+    <div class="auth-container">
+        <div class="buttons">
+            <button id="registerBtn" class="btn">Register</button>
+            <button id="loginBtn" class="btn">Login</button>
+        </div>
+        <div class="cards">
+            <div id="card" class="card hidden">
+
+                <div class="card show">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-header"></div>
+                            <div>please login</div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-header"></div>
+                            <div class="back">Enjoy the game</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-header" id="cardTitle">Register</div>
+                <div class="card-body">
+                    <!-- Registration Form -->
+                    <form id="registerForm" class="form hidden">
+                        <input type="text" id="regUsername" placeholder="Username" required><br>
+                        <input type="email" id="regEmail" placeholder="Email" required><br>
+                        <input type="password" id="regPassword" placeholder="Password" required><br>
+                        <button type="submit" class="form-btn">Register</button>
+                    </form>
+
+                    <!-- Login Form -->
+                    <form id="loginForm" class="form hidden">
+                        <input type="text" id="loginUsername" placeholder="Username" required><br>
+                        <input type="password" id="loginPassword" placeholder="Password" required><br>
+                        <button type="submit" class="form-btn">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

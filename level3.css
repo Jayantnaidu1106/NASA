@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(bg2copy.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.container{
+    display: flex;
+cursor: pointer;
+}
+
+.head{
+    width: 400px;
+    height: 100px;
+    position: relative;
+    /* top: 50px; */
+    background-image: url(head2.png);
+    background-size: contain;
+}
+
+.g1{
+    width: 150px;
+    height: 80px;
+    position:relative;
+    top: 600px;
+    left: -200px;
+    right:240px;
+    background-image: url(Garbage_1.png);
+    background-size: contain;
+}
+
+.g2{
+    width: 120px;
+    height: 80px;
+    position:relative;
+    top: 570px;
+    left: -50px;
+    background-image: url(Garbage_2.png);
+    background-size: contain;
+}
+
+.g3{
+    width: 100px;
+    height: 60px;
+    position:relative;
+    top: 580px;
+    left: 20px;
+    background-image: url(Garbage_3.png);
+    background-size: cover;
+}
+
+.g4{
+    width: 220px;
+    height: 120px;
+    position:relative;
+    top: 560px;
+    left: 80px;
+    background-image: url(Garbage_4.png);
+    background-size: contain;
+}
+
+.g5{
+    width: 65px;
+    height: 60px;
+    position:relative;
+    top: 600px;
+    left: 300px;
+    background-image: url(Garbage_5.png);
+    background-size: contain;
+}
+
+.g6{
+    width: 80px;
+    height: 60px;
+    position:relative;
+    top: 580px;
+    left: 100px;
+    background-image: url(Garbage_6.png);
+    background-size: contain;
+}
+.hurray-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #4CAF50; /* Green background color */
+    color: white;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.go-button {
+    padding: 10px 20px;
+    background-color: #FF6B6B; /* Red background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: none; /* Initially hidden */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.go-button {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+.go-button:hover {
+    background-color: #FF7D7D; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly grow on hover */
+}
+.hidden {
+    display: none; /* Hide element */
+    opacity: 0; /* Fully transparent */
+}
+.fade-out {
+    animation: fadeOut 1s forwards;
+    /* The 'forwards' keyword ensures the div stays hidden after the animation ends */
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

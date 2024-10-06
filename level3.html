@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="level3.css">
+    <title>Garbage Clicking Game</title>
+</head>
+<body>
+    <div class="container">
+        <div class="head"></div>
+        <div class="g1" onclick="removeGarbage(1)"></div>
+        <div class="g2" onclick="removeGarbage(2)"></div>
+        <div class="g3" onclick="removeGarbage(3)"></div>
+        <div class="g4" onclick="removeGarbage(4)"></div>
+        <div class="g5" onclick="removeGarbage(5)"></div>
+        <div class="g6" onclick="removeGarbage(6)"></div>
+    </div>
+
+    <div id="hurrayCard" class="hurray-card hidden">HURRAY! Level Completed!</div>
+    <button id="goButton" class="go-button hidden">END</button>
+
+    <script>
+        const totalGarbage = 6; // Total number of garbage items
+        let garbageRemovedCount = 0; // Counter for removed garbage
+
+        function showHurrayCard() {
+            const hurrayCard = document.getElementById("hurrayCard");
+            hurrayCard.classList.remove("hidden");
+            hurrayCard.classList.add("visible");
+            
+            // Show the Go button after the Hurray card
+            setTimeout(() => {
+                document.getElementById("goButton").classList.remove("hidden");
+                document.getElementById("goButton").classList.add("visible");
+            }, 2000); // Show the button after 2 seconds
+          
+           
+        }
+
+        function removeGarbage(index) {
+            const garbageItem = document.querySelector(`.g${index}`);
+            garbageItem.classList.add("fade-out");
+            console.log("check");
+
+            garbageRemovedCount++; // Increment the count of removed garbage
+
+            // Check if all garbage has been removed
+            if (garbageRemovedCount === totalGarbage) {
+                showHurrayCard(); // Show the Hurray card
+            }
+        }
+
+        document.getElementById('goButton').addEventListener('click', function() {
+            window.location.href='end.html';});
+    </script>
+</body>
+</html>
